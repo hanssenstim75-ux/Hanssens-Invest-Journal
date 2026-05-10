@@ -31,7 +31,7 @@ export default function AddTrade() {
   const inputCls = 'w-full bg-bg border border-border px-4 py-2.5 text-sm text-white focus:outline-none focus:border-border-light transition-colors'
 
   return (
-    <div className="p-8 max-w-2xl">
+    <div className="p-8 w-full max-w-3xl">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">{t('addTrade.register')}</p>
         <h1 className="brand-title text-4xl text-white">{t('addTrade.title')}</h1>

@@ -71,7 +71,7 @@ export default function Calendar() {
   const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-8 w-full">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">Overzicht</p>
         <h1 className="brand-title text-4xl text-white">Kalender</h1>

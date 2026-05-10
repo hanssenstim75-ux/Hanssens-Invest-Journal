@@ -8,9 +8,9 @@ export default function Layout() {
   if (!user) return <Navigate to="/login" replace />
 
   return (
-    <div className="flex min-h-screen bg-bg">
+    <div className="flex h-full min-h-screen w-full bg-bg">
       <Sidebar />
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto w-full">
         <Outlet />
       </main>
     </div>

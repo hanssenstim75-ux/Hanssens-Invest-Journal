@@ -83,7 +83,7 @@ export default function Analytics() {
   }
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-8 w-full">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">Statistieken</p>
         <h1 className="brand-title text-4xl text-white">Analyse</h1>

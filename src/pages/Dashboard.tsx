@@ -66,7 +66,7 @@ export default function Dashboard() {
   const recent = trades.slice(0, 5)
 
   return (
-    <div className="p-8 max-w-5xl">
+    <div className="p-8 w-full">
       <div className="mb-8 flex items-end justify-between">
         <div>
           <p className="label-caps text-muted mb-1">{t('dashboard.overview')}</p>

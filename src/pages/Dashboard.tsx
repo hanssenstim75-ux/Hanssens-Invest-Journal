@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { TrendingUp, TrendingDown, Activity, Target, PlusCircle, ArrowRight } from 'lucide-react'
+import { TrendingUp, TrendingDown, Activity, PlusCircle, ArrowRight } from 'lucide-react'
 import { useTrades } from '../context/TradeContext'
 import { Trade } from '../types/trade'
 

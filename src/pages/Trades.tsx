@@ -28,7 +28,7 @@ export default function Trades() {
   const totalPnl = useMemo(() => filtered.filter(tr => tr.status === 'CLOSED').reduce((s, tr) => s + (tr.pnl ?? 0), 0), [filtered])
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <div className="mb-6 flex items-end justify-between">
         <div>
           <p className="label-caps text-muted mb-1">{t('trades.overview')}</p>

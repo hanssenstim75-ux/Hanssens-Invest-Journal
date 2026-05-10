@@ -52,13 +52,13 @@ export default function Calendar() {
   const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
 
   return (
-    <div className="p-8 w-full">
+    <div className="p-4 md:p-8 w-full">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">{t('calendar.overview')}</p>
         <h1 className="brand-title text-4xl text-white">{t('calendar.title')}</h1>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
         {/* Calendar */}
         <div className="lg:col-span-2 bg-card border border-border p-5">
           <div className="flex items-center justify-between mb-5">

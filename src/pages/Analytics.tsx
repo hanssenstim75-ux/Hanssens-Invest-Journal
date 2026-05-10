@@ -83,14 +83,14 @@ export default function Analytics() {
   }
 
   return (
-    <div className="p-8 w-full">
+    <div className="p-4 md:p-8 w-full">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">Statistieken</p>
         <h1 className="brand-title text-4xl text-white">Analyse</h1>
       </div>
 
       {/* Key stats */}
-      <div className="grid grid-cols-2 gap-4 mb-8 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 mb-6 lg:grid-cols-4">
         <div className="bg-card border border-border p-5">
           <p className="label-caps mb-2">Beste Trade</p>
           <p className="text-profit text-xl font-light">{fmt(stats.bestTrade?.pnl ?? 0)}</p>
@@ -142,7 +142,7 @@ export default function Analytics() {
         </ResponsiveContainer>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
         {/* Per-trade bar */}
         <div className="bg-card border border-border p-5">
           <p className="label-caps mb-4">P&L per Trade</p>

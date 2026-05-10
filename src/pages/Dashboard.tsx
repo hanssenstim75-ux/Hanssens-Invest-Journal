@@ -66,7 +66,7 @@ export default function Dashboard() {
   const recent = trades.slice(0, 5)
 
   return (
-    <div className="p-8 w-full">
+    <div className="p-4 md:p-8 w-full">
       <div className="mb-8 flex items-end justify-between">
         <div>
           <p className="label-caps text-muted mb-1">{t('dashboard.overview')}</p>
@@ -78,14 +78,14 @@ export default function Dashboard() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-8 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 mb-6 lg:grid-cols-4">
         <StatCard label={t('dashboard.totalPnl')} value={fmt(stats.totalPnl)} sub={`${stats.closed} ${t('dashboard.closedTrades')}`} positive={stats.totalPnl >= 0} />
         <StatCard label={t('dashboard.winRate')} value={`${stats.winRate.toFixed(0)}%`} sub={`${t('dashboard.ofTrades').replace('{n}', stats.closed.toString())}`} positive={stats.winRate >= 50} />
         <StatCard label={t('dashboard.openPositions')} value={stats.open.toString()} sub={t('dashboard.activeTrades')} />
         <StatCard label={t('dashboard.rr')} value={`${stats.rr.toFixed(2)}x`} sub={t('dashboard.average')} positive={stats.rr >= 1} />
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 gap-3 mb-6 sm:grid-cols-2">
         {(['LONG', 'SHORT'] as const).map(dir => {
           const dirTrades = trades.filter(t => t.direction === dir && t.status === 'CLOSED')
           const dirPnl = dirTrades.reduce((s, t) => s + (t.pnl ?? 0), 0)
@@ -124,7 +124,7 @@ export default function Dashboard() {
         }
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-4">
+      <div className="mt-4 grid grid-cols-3 gap-3">
         {['Crypto', 'Stocks', 'Forex'].map(market => {
           const m = trades.filter(t => t.market === market && t.status === 'CLOSED')
           const pnl = m.reduce((s, t) => s + (t.pnl ?? 0), 0)

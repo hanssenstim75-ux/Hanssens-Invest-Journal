@@ -31,14 +31,14 @@ export default function AddTrade() {
   const inputCls = 'w-full bg-bg border border-border px-4 py-2.5 text-sm text-white focus:outline-none focus:border-border-light transition-colors'
 
   return (
-    <div className="p-8 w-full max-w-3xl">
+    <div className="p-4 md:p-8 w-full max-w-3xl">
       <div className="mb-8">
         <p className="label-caps text-muted mb-1">{t('addTrade.register')}</p>
         <h1 className="brand-title text-4xl text-white">{t('addTrade.title')}</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="bg-card border border-border p-6 space-y-5">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="label-caps block mb-2">{t('addTrade.date')}</label>
             <input type="date" value={form.date} onChange={e => set('date', e.target.value)} required className={inputCls} />
@@ -49,7 +49,7 @@ export default function AddTrade() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="label-caps block mb-2">{t('addTrade.market')}</label>
             <select value={form.market} onChange={e => set('market', e.target.value as Market)} className={inputCls + ' cursor-pointer'}>
@@ -80,7 +80,7 @@ export default function AddTrade() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="label-caps block mb-2">{t('addTrade.entry')}</label>
             <input type="number" step="any" value={form.entryPrice} onChange={e => set('entryPrice', e.target.value)} required placeholder="0.00" className={inputCls} />
